@@ -1,1 +1,1 @@
-# Codewars
+# Codewar codes
