@@ -51,13 +51,13 @@ function isValid(str){
 }
 
 
-'''function sort(str) {
+/*function sort(str) {
   const CHARS = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789!?’\'()*+,.…:"@#$%&^-;<>=[]_{}~“”£ '
   return str.split('').sort((a,b) => CHARS.indexOf(a) - CHARS.indexOf(b)).join('').trim()
-}'''
+}
 
 
-'''function sort(str) {
+function sort(str) {
   var st=(s)=>s==null ? [] : s.sort((a,b)=>a.toLowerCase().charCodeAt()*1000-/[A-Z]/.test(a)-b.toLowerCase().charCodeAt()*1000+/[A-Z]/.test(b));
   return st(str.match(/[A-Za-z]/gm)).concat(st(str.match(/\d/gm))).concat(st(str.match(/[^A-Za-z0-9 \n]/gm))).join("")
-}'''
+}*/
