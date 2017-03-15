@@ -32,7 +32,7 @@ N23.43345, E32.6457
 """
 
 def is_valid_coordinates(coordinates):
-	match = re.search("^[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?),\s*[-+]?(180(\.0+)?|((1[0-7]\d)|([1-9]?\d))(\.\d+)?)$", coordinates)
+	match = re.search("^[-]?([0-8]?\d(\.\d+)?|90(\.0+)?),\s*[-]?(180(\.0+)?|((1[0-7]\d)|([1-9]?\d))(\.\d+)?)$", coordinates)
 	if(match):
 		return True
 	return False
