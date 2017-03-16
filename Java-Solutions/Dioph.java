@@ -70,14 +70,50 @@ public class Dioph {
 /*
 
 import math
+from itertools import chain, cycle, accumulate # last of which is Python 3 only
+
+def factors(n):
+    def prime_powers(n):
+        # c goes through 2, 3, 5, then the infinite (6n+1, 6n+5) series
+        for c in accumulate(chain([2, 1, 2], cycle([2,4]))):
+            if c*c > n: break
+            if n%c: continue
+            d,p = (), c
+            while not n%c:
+                n,p,d = n//c, p*c, d + (p,)
+            yield(d)
+        if n > 1: yield((n,))
+    
+    r = [1]
+    for e in prime_powers(n):
+        r += [a*b for a in r for b in e]
+    return r
 
 def sol_equa(n):
     s = []
-    for l in range(n, int(math.sqrt(n)) - 1, -1):
+    f = sorted(factors(n), reverse=True)
+    for l in f:
         if n % l == 0:
             y = int((l - (n/l))/4)
             x = int(((n/l) + l)/2)
             if(x >= 0 and y >= 0 and ((x*x) - (4*y*y)) == n):
                s.append([x, y])
     return s
+
+
+===================================
+Best Practices:
+
+import math
+def sol_equa(n):
+    res = []
+    for i in range(1, int(math.sqrt(n)) + 1):
+        if n % i == 0:
+            j = n // i
+            if (i + j) % 2 == 0 and (j - i) % 4 == 0:
+                x = (i + j) // 2
+                y = (j - i) // 4
+                res.append([x, y])
+            
+    return res
  */
